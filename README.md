@@ -18,5 +18,4 @@ Return combined results.
 #3 Find any person from Set2 with a name that is in the result of #2.
 
 #To sum up
-I finished  all three tasks in 1 hour 10 minutes. Overal score given to me by interviewer was 8/10 which is very high score in my opinion.
-It was very stressful for me as I never been in such situation. Overall I am very happy with the outcome.
+I finished all three tasks in 1 hour 10 minutes. The Overall score given to me by the interviewer was 8/10 which is a very high score in my opinion. It was very stressful for me as I never been in such situation. However, I am very happy with the outcome I ended up.
