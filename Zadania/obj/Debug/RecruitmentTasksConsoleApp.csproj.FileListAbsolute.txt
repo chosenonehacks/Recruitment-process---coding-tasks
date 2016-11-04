@@ -1,0 +1,9 @@
+D:\github\Zadania\Zadania\bin\Debug\Zadania.exe.config
+D:\github\Zadania\Zadania\bin\Debug\Zadania.exe
+D:\github\Zadania\Zadania\bin\Debug\Zadania.pdb
+D:\github\Zadania\Zadania\obj\Debug\RecruitmentTasksConsoleApp.csprojResolveAssemblyReference.cache
+D:\github\Zadania\Zadania\obj\Debug\Zadania.exe
+D:\github\Zadania\Zadania\obj\Debug\Zadania.pdb
+D:\github\Zadania\Zadania\bin\Debug\DataFiles\Set1_1.csv
+D:\github\Zadania\Zadania\bin\Debug\DataFiles\Set1_2.csv
+D:\github\Zadania\Zadania\bin\Debug\DataFiles\Set2.csv

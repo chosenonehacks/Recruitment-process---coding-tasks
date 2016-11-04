@@ -28,7 +28,7 @@ namespace Zadania
 
             //TASK #2 Merge Set1_1 with Set1_2. Return combined results.
             List<String> combinedResult = new List<String>(Set1_2List);
-            combinedResult.AddRange(unmatchedList);
+            combinedResult.AddRange(unmatchedList); 
 
             //TASK #3 Find any PERSON from Set2 with a NAME that is in the result of #2.            
             //Sub task 3.2 Created method to get person lists and extracted Persons from both files
