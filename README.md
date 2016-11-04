@@ -3,7 +3,7 @@ I participated in recruitment coding skill test, this is the code that I wrote t
 
 Just bear in mind that this code is after some refactoring, orginal was different but did the same job. I was under time stress and watching person pressure...
 
-The tasks was:
+#The tasks was:
 
 I got 60 minutes to solve it. Codeing interviewer was seeing my screen via skype screen share. 
 I could use internet, tools and programming languages I like (but most likely it was all about C#)
