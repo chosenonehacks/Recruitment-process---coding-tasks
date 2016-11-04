@@ -6,16 +6,16 @@ using System.Linq;
 namespace Zadania
 {
     //#Sub task 3.1 Create model for a Person
-    struct Person
+    public struct Person
     {
         public String FirstName;
         public String LastName;
         public String Email;
     }
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             #region TASK #1 Compare Set1_1 with Set1_2. Return not-matched results.
 
@@ -56,7 +56,7 @@ namespace Zadania
             Console.ReadLine();
         }
 
-        private static List<string> GetJustNames(List<Person> combinedResultsPersonLists)
+        public static List<string> GetJustNames(List<Person> combinedResultsPersonLists)
         {
             List<string> NamesFromCombined = new List<string>();
 
@@ -67,7 +67,7 @@ namespace Zadania
             return NamesFromCombined;
         }
 
-        private static List<Person> GetPersonList(List<string> set_2)
+        public static List<Person> GetPersonList(List<string> set_2)
         {
             List<Person> personList = new List<Person>();
 
@@ -85,7 +85,7 @@ namespace Zadania
             return personList;
         }
 
-        private static List<string> GiveUnmatched(List<string> list1, List<string> list2)
+        public static List<string> GiveUnmatched(List<string> list1, List<string> list2)
         {           
             var tempList = new List<string>();
             foreach (var item in list1)
@@ -98,7 +98,7 @@ namespace Zadania
             return tempList;
         }
 
-        private static List<string> ReadCSV(string plik)
+        public  static List<string> ReadCSV(string plik)
         {
             List<string> listFromCSV = new List<string>();
 
