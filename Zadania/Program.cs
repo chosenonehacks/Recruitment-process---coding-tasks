@@ -5,7 +5,8 @@ using System.Linq;
 
 namespace Zadania
 {
-    class Person
+    //#Sub task 3.1 Create model for a Person
+    struct Person
     {
         public String FirstName;
         public String LastName;
@@ -16,29 +17,49 @@ namespace Zadania
     {
         static void Main(string[] args)
         {
-            List<string> plik1List = ReadCSV(@"C:\Set1_1.csv");
-            List<string> plik2List = ReadCSV(@"C:\Set1_2.csv");
-            List<string> set_2 = ReadCSV(@"C:\Set2.csv");
+            //TASK #1 Compare Set1_1 with Set1_2. Return not-matched results.
+            //Sub task #1.1 Load data needed for tasks into lists
+            List<string> Set1_1List = ReadCSV("DataFiles/Set1_1.csv");
+            List<string> Set1_2List = ReadCSV("DataFiles/Set1_2.csv");
+            List<string> Set2List = ReadCSV("DataFiles/Set2.csv");
 
-            List<string> unmatchedList = GiveUnmatched(plik1List, plik2List);
+            //Sub taks 1.2 Created method that will give us not matched results
+            List<string> unmatchedList = GiveUnmatched(Set1_1List, Set1_2List);
 
-            plik2List.AddRange(unmatchedList);
+            //TASK #2 Merge Set1_1 with Set1_2. Return combined results.
+            List<String> combinedResult = new List<String>(Set1_2List);
+            combinedResult.AddRange(unmatchedList);
 
-            List<string> cominbedReuslt = plik2List;
+            //TASK #3 Find any PERSON from Set2 with a NAME that is in the result of #2.            
+            //Sub task 3.2 Created method to get person lists and extracted Persons from both files
+            List<Person> personLists = GetPersonList(Set2List);
+            List<Person> combinedResultsPersonLists = GetPersonList(combinedResult);
 
-            List<Person> personLists = GetPersonList(set_2);
-            List<Person> combinedResultsPersonLists = GetPersonList(cominbedReuslt);
+            //Sub task 3.3 We are intersted only in NAMES values, so I created method to extract names
+            List<string> NamesFromCombinedList = GetJustNames(combinedResultsPersonLists);
 
+            //Sub task 3.4 Match persons from Set2 with a Names from combined results
+            List<Person> matchedPersonsList = personLists.Where(person => NamesFromCombinedList.Contains(person.LastName)).ToList();
+
+            //Display results
+            int i = 0;
+            foreach (var matchedPerson in matchedPersonsList)
+            {                
+                Console.WriteLine(i++ + ":" + matchedPerson.LastName);               
+            }
+            
+            Console.ReadLine();
+        }
+
+        private static List<string> GetJustNames(List<Person> combinedResultsPersonLists)
+        {
             List<string> NamesFromCombined = new List<string>();
 
             foreach (var item in combinedResultsPersonLists)
             {
                 NamesFromCombined.Add(item.LastName);
             }
-
-            List<Person> listaNameKtorePasuja = personLists.Where(person => NamesFromCombined.Contains(person.LastName)).ToList();
-
-            Console.ReadLine();
+            return NamesFromCombined;
         }
 
         private static List<Person> GetPersonList(List<string> set_2)
@@ -61,15 +82,15 @@ namespace Zadania
 
         private static List<string> GiveUnmatched(List<string> list1, List<string> list2)
         {           
-            var temp = new List<string>();
+            var tempList = new List<string>();
             foreach (var item in list1)
             {
                 if (list2.Contains(item) == false)
                 {
-                    temp.Add(item);
+                    tempList.Add(item);
                 }
             }
-            return temp;
+            return tempList;
         }
 
         private static List<string> ReadCSV(string plik)
@@ -79,16 +100,15 @@ namespace Zadania
             var reader1 = new StreamReader(File.OpenRead(plik));
             
 
-            List<string> listA = new List<string>();
-            List<string> listB = new List<string>();
+            List<string> tempList = new List<string>();
+            
             while (!reader1.EndOfStream)
             {
                 var line = reader1.ReadLine();
 
-                listA.Add(line);                
+                tempList.Add(line);                
             }
-
-            return listA;
+            return tempList;
         }
 
     }
