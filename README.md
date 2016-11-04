@@ -1,6 +1,8 @@
 # Recruitment-process---coding-tasks
 I participated in recruitment coding skill test, this is the code that I wrote to solve given problems.
 
+Just bear in mind that this code is after some refactoring, orginal was different but did the same job. as I was under time stress and wathcing person pressure. 
+
 The tasks was:
 
 I got 60 minutes to solve it. Codeing interviewer was seeing my screen via skype screen share. 
@@ -17,3 +19,7 @@ Merge Set1_1 with Set1_2.
 Return combined results. 
 #3
 Find any person from Set2 with a name that is in the result of #2.
+
+#To sum up
+I finished  all three tasks in 1 hour 10 minutes. Overal score given to me by interviewer was 8/10 which is very high score in my opinion.
+It was very stressful for me as I never been in such situation. Overall I am very happy with the outcome.
