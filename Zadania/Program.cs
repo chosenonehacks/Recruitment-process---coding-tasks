@@ -17,7 +17,8 @@ namespace Zadania
     {
         static void Main(string[] args)
         {
-            //TASK #1 Compare Set1_1 with Set1_2. Return not-matched results.
+            #region TASK #1 Compare Set1_1 with Set1_2. Return not-matched results.
+
             //Sub task #1.1 Load data needed for tasks into lists
             List<string> Set1_1List = ReadCSV("DataFiles/Set1_1.csv");
             List<string> Set1_2List = ReadCSV("DataFiles/Set1_2.csv");
@@ -26,11 +27,14 @@ namespace Zadania
             //Sub taks 1.2 Created method that will give us not matched results
             List<string> unmatchedList = GiveUnmatched(Set1_1List, Set1_2List);
 
-            //TASK #2 Merge Set1_1 with Set1_2. Return combined results.
-            List<String> combinedResult = new List<String>(Set1_2List);
-            combinedResult.AddRange(unmatchedList); 
+            #endregion
 
-            //TASK #3 Find any PERSON from Set2 with a NAME that is in the result of #2.            
+            #region TASK #2 Merge Set1_1 with Set1_2. Return combined results.
+            List<String> combinedResult = new List<String>(Set1_2List);
+            combinedResult.AddRange(unmatchedList);
+            #endregion
+
+            #region TASK #3 Find any PERSON from Set2 with a NAME that is in the result of #2.            
             //Sub task 3.2 Created method to get person lists and extracted Persons from both files
             List<Person> personLists = GetPersonList(Set2List);
             List<Person> combinedResultsPersonLists = GetPersonList(combinedResult);
@@ -40,8 +44,9 @@ namespace Zadania
 
             //Sub task 3.4 Match persons from Set2 with a Names from combined results
             List<Person> matchedPersonsList = personLists.Where(person => NamesFromCombinedList.Contains(person.LastName)).ToList();
+            #endregion
 
-            //Display results
+            //Just Display results...
             int i = 0;
             foreach (var matchedPerson in matchedPersonsList)
             {                
