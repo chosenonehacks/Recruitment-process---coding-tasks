@@ -11,14 +11,11 @@ I could use internet, tools and programming languages I like (but most likely it
 Three .csv files was given with names like: Set1_1.csv, Set1_2.csv, Set2.csv
 
 Tasks was like this:
-#1
-Compare Set1_1 with Set1_2.
+#1 Compare Set1_1 with Set1_2.
 Return not-matched results. 
-#2
-Merge Set1_1 with Set1_2.
+#2 Merge Set1_1 with Set1_2.
 Return combined results. 
-#3
-Find any person from Set2 with a name that is in the result of #2.
+#3 Find any person from Set2 with a name that is in the result of #2.
 
 #To sum up
 I finished  all three tasks in 1 hour 10 minutes. Overal score given to me by interviewer was 8/10 which is very high score in my opinion.
