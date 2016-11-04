@@ -1,7 +1,7 @@
 # Recruitment-process---coding-tasks
 I participated in recruitment coding skill test, this is the code that I wrote to solve given problems.
 
-Just bear in mind that this code is after some refactoring, orginal was different but did the same job. I was under time stress and wathcing person pressure...
+Just bear in mind that this code is after some refactoring, orginal was different but did the same job. I was under time stress and watching person pressure...
 
 The tasks was:
 
