@@ -73,14 +73,14 @@ namespace Zadania
 
             foreach (var item in set_2)
             {
-                Person pSet2 = new Person();
+                Person person;
 
-                string[] tablica = item.Split(';');
-                pSet2.FirstName = tablica[0];
-                pSet2.LastName = tablica[1];
-                pSet2.Email = tablica[2];
+                string[] tempSplitTable = item.Split(';');
+                person.FirstName = tempSplitTable[0];
+                person.LastName = tempSplitTable[1];
+                person.Email = tempSplitTable[2];
 
-                personList.Add(pSet2);
+                personList.Add(person);
             }
             return personList;
         }
